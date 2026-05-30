@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Scouting reports" %>
+
+<h1>Scouting reports</h1>
+
+<%= link_to "Add New Report", new_scouting_report_path %>
+
+<ul>
+  <% @scouting_reports.each do |report| %>
+    <li>
+      <%= link_to report.player_name, report %>
+      (<%= report.position %>)
+    </li>
+  <% end %>
+</ul>

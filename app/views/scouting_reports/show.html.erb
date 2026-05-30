@@ -1,0 +1,54 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= @scouting_report.player_name %></h1>
+
+<p>
+  <strong>Position:</strong>
+  <%= @scouting_report.position %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @scouting_report.college %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @scouting_report.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @scouting_report.weight %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @scouting_report.age %>
+</p>
+
+<p>
+  <strong>Positives:</strong>
+  <%= @scouting_report.positives %>
+</p>
+
+<p>
+  <strong>Negatives:</strong>
+  <%= @scouting_report.negatives %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @scouting_report.comments %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @scouting_report.grade %>
+</p>
+
+<div>
+  <%= link_to "Edit", edit_scouting_report_path(@scouting_report) %> |
+  <%= link_to "Back to home", root_path %>
+  <%= button_to "Delete", @scouting_report, method: :delete %>
+</div>

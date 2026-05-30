@@ -1,0 +1,12 @@
+<% content_for :title, "Editing scouting report" %>
+
+<h1>Editing scouting report</h1>
+
+<%= render "form", scouting_report: @scouting_report %>
+
+<br>
+
+<div>
+  <%= link_to "Cancel", @scouting_report %> |
+  <%= link_to "Back to Home", root_path %>
+</div>
