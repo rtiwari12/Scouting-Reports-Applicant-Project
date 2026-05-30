@@ -1,0 +1,67 @@
+<%= form_with(model: scouting_report) do |form| %>
+  <% if scouting_report.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(scouting_report.errors.count, "error") %> prohibited this scouting_report from being saved:</h2>
+
+      <ul>
+        <% scouting_report.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :player_name, style: "display: block" %>
+    <%= form.text_field :player_name %>
+  </div>
+
+  <div>
+    <%= form.label :position, style: "display: block" %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div>
+    <%= form.label :college, style: "display: block" %>
+    <%= form.text_field :college %>
+  </div>
+
+  <div>
+    <%= form.label :height, "Height (in.)", style: "display: block" %>
+    <%= form.number_field :height, min: 0 %>
+  </div>
+
+  <div>
+    <%= form.label :weight, style: "display: block" %>
+    <%= form.number_field :weight, min:0 %>
+  </div>
+
+  <div>
+    <%= form.label :age, style: "display: block" %>
+    <%= form.number_field :age, min:0 %>
+  </div>
+
+  <div>
+    <%= form.label :positives, style: "display: block" %>
+    <%= form.textarea :positives %>
+  </div>
+
+  <div>
+    <%= form.label :negatives, style: "display: block" %>
+    <%= form.textarea :negatives %>
+  </div>
+
+  <div>
+    <%= form.label :comments, "Additional Comments", style: "display: block" %>
+    <%= form.textarea :comments %>
+  </div>
+
+  <div>
+    <%= form.label :grade, style: "display: block" %>
+    <%= form.number_field :grade, min: 0 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
